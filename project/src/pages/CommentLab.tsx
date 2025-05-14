@@ -1,7 +1,16 @@
-import React, { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Search } from 'lucide-react';
 
-function AnimatedText({ text, delay, duration = 0.3, stayDuration = 1.5, fadeOutDuration = 0.2 }) {
+interface AnimatedTextProps {
+  text: string;
+  delay: number;
+  duration?: number;
+  stayDuration?: number;
+  fadeOutDuration?: number;
+  persist?: boolean;
+}
+
+function AnimatedText({ text, delay, duration = 0.3, stayDuration = 1.5, fadeOutDuration = 0.2, persist = false}: AnimatedTextProps) {
   const [opacity, setOpacity] = useState(0);
   const [display, setDisplay] = useState(true);
 

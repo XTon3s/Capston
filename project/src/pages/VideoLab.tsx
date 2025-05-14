@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 interface Flask {
   id: string;
@@ -85,8 +85,6 @@ function VideoLab() {
   { id: 'short', type: 'duration', label: '10분 미만', color: 'rgb(255, 99, 132)', selected: false, disabled: false },
   { id: 'medium', type: 'duration', label: '10~20분', color: 'rgb(255, 206, 86)', selected: false, disabled: false },
   { id: 'long', type: 'duration', label: '30분 이상', color: 'rgb(75, 192, 192)', selected: false, disabled: false },
-
-  // Category flasks - 색상 모두 다르게 설정
   { id: 'food', type: 'category', label: '먹방', color: 'rgb(255, 159, 64)', selected: false, disabled: false },
   { id: 'stock', type: 'category', label: '주식', color: 'rgb(153, 102, 255)', selected: false, disabled: false },
   { id: 'cooking', type: 'category', label: '요리', color: 'rgb(54, 162, 235)', selected: false, disabled: false },
