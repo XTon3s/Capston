@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import TasteAnalysis from './pages/TasteAnalysis';
 import VideoLab from './pages/VideoLab';
 import CommentLab from './pages/CommentLab';
+import OauthCallback from './pages/OauthCallback';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
             <Route path="/taste-analysis" element={<TasteAnalysis />} />
             <Route path="/video-lab" element={<VideoLab />} />
             <Route path="/comment-lab" element={<CommentLab />} />
+            <Route path="/OauthCallback" element={<OauthCallback />} />
           </Routes>
         </main>
       </div>
