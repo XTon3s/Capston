@@ -45,7 +45,7 @@ function OauthCallback() {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50 p-8 text-center">
-      <h1 className="text-3xl font-bold mb-6">OAuth 인증 완료 🎉</h1>
+      <h1 className="text-3xl font-bold mb-6">사용자 정보 로드 성공 🎉</h1>
 
       {userInfo && (
         <div className="mb-8">
@@ -57,26 +57,26 @@ function OauthCallback() {
 
       <div className="mb-10 w-full max-w-2xl">
         <h2 className="text-2xl font-semibold mb-3">📺 구독 중인 채널</h2>
-        <ul className="list-disc text-left ml-6 space-y-1">
+        <ul className="list-disc text-center ml-6 space-y-1">
           {subscriptions.length > 0 ? (
             subscriptions.map((sub, index) => (
               <li key={index}>{sub.snippet.title}</li>
             ))
           ) : (
-            <p className="text-gray-500">구독 채널이 없습니다.</p>
+            <p className="text-gray-500 items-center justify-center">구독 채널이 없습니다.</p>
           )}
         </ul>
       </div>
 
       <div className="w-full max-w-2xl">
         <h2 className="text-2xl font-semibold mb-3">👍 좋아요한 영상</h2>
-        <ul className="list-disc text-left ml-6 space-y-1">
+        <ul className="list-disc text-center ml-6 space-y-1">
           {likedVideos.length > 0 ? (
             likedVideos.map((video, index) => (
               <li key={index}>{video.snippet.title}</li>
             ))
           ) : (
-            <p className="text-gray-500">좋아요한 영상이 없습니다.</p>
+            <p className="text-gray-500 items-center justify-center">좋아요한 영상이 없습니다.</p>
           )}
         </ul>
       </div>
